@@ -9,7 +9,7 @@ import wikipedia
 import os
 import smtplib
 
-email = {"Aryaman": "aryamanrout.2819@gmail.com", "Prabir kumar Rout": "prabirkrout@gmail.com"}
+
 
 engine = pyttsx3.init('sapi5')
 voices = engine.getProperty('voices')
@@ -131,16 +131,5 @@ if __name__=="__main__":
 
             os.startfile(codepath)
 
-        elif 'email to Aryaman' in query:
-            try:
-                speak("What should i Say sir!")
-                content = takecommand()
-                to = {email["Aryaman"]}
-                send_email(to , content)
-                speak("Email has been sent!")
-            except Exception as e:
-                print(e)
-                speak("Sorry sir . Iam not able to send the email right now!")
-
-
+        
         
